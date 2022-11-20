@@ -1,0 +1,26 @@
+/* Media queries */
+
+@mixin media($type) {
+    @if $type == 'mobile' {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $type == 'screen' {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+}
+
+/* Container large */
+
+@mixin padConLarge($p1, $p2, $p3) {
+    padding: $p1;
+    @media screen and (min-width: 1024px) {
+         padding: $p2;
+    }
+    @media screen and (min-width: 1440px) {
+         padding: $p3;
+    }
+}

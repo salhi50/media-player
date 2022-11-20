@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="dist/style.css">
+    <!-- SCRIPTS -->
+    <script src="assets/js/control.js" defer></script>
+    <script src="assets/js/video.js" defer></script>
+    <title>Video Player</title>
+</head>
+<body data-dark="false">
+    <div class="wrapper">
+        <div id="overlay" data-asideHidden="true"></div>
+        <!-- HEADER -->
+        <header>
+            <div class="container-lg">
+                <ul class="header-menu">
+                    <li class="logo">
+                        <i class="bx bx-menu" id="hamburgar"></i>
+                        <h3 class="medium-title">Media Player</h3>
+                    </li>
+                    <li class="theme">
+                        <i class="bx" id="switch-theme"></i>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+
+        <!-- MAIN -->
+
+        <main>
+
+            <!-- ASIDE -->
+            <aside data-asideHidden="true" id="aside">
+                <i id="close-aside" class="bx bx-x clicked"></i>
+                <h5 class="small-title">Listen/Watch</h5>
+                <nav class="aside-nav">
+                    <ul class="aside-menu">
+                        <li class="aside-item">
+                           <a href="music.html">
+                            <i class="bx bx-music"></i>
+                            <p>Music</p>
+                           </a>
+                        </li>
+                        <li class="aside-item">
+                           <a href="video.html" class="active">
+                            <i class="bx bx-video"></i>
+                            <p>Videos</p>
+                           </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- MEDIA LIST -->
+            <section class="media-section video-section">
+                <h2 class="big-title">
+                    <i class="bx bx-video"></i>
+                    Videos
+                </h2>
+                <p class="description">Watch some of my favourite videos.</p>
+
+                <ul class="media-menu" id="videos-container"></ul>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>

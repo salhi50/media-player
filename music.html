@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="dist/main.css">
+    <link rel="stylesheet" href="dist/style.css">
+    <!-- SCRIPTS -->
+    <script src="assets/js/control.js" defer></script>
+    <script src="assets/js/music.js" defer></script>
+    <title>Music Player</title>
+</head>
+<body data-dark="false">
+    <div class="wrapper">
+        <div id="overlay" data-asideHidden="true"></div>
+        <!-- HEADER -->
+        <header>
+            <div class="container-lg">
+                <ul class="header-menu">
+                    <li class="logo">
+                        <i class="bx bx-menu" id="hamburgar"></i>
+                        <h3 class="medium-title">Media Player</h3>
+                    </li>
+                    <li class="theme">
+                        <i class="bx" id="switch-theme"></i>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+
+        <!-- MAIN -->
+
+        <main>
+
+            <!-- ASIDE -->
+            <aside data-asideHidden="true" id="aside">
+                <i id="close-aside" class="bx bx-x clicked"></i>
+                <h5 class="small-title">Listen/Watch</h5>
+                <nav class="aside-nav">
+                    <ul class="aside-menu">
+                        <li class="aside-item">
+                           <a href="music.html" class="active">
+                            <i class="bx bx-music"></i>
+                            <p>Music</p>
+                           </a>
+                        </li>
+                        <li class="aside-item">
+                           <a href="video.html">
+                            <i class="bx bx-video"></i>
+                            <p>Videos</p>
+                           </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- MEDIA LIST -->
+            <section class="media-section">
+                <h2 class="big-title">
+                    <i class="bx bx-music"></i>
+                    Music
+                </h2>
+                <p class="description">Listen to some of my favourite songs.</p>
+
+                <ul class="media-menu" id="songs-container"></ul>
+            </section>
+
+        </main>
+
+        <!-- Song control -->
+        <article class="song-player" id="song-player">
+            <!-- Full screen format -->
+            <section class="song-full" id="song-full" hidden>
+                <i class="bx bx-chevron-down" id="collapse-song"></i>
+                <div class="song-info">
+                    <h4 class="song-title">Neffex - lose my mind</h4>
+                    <p class="song-artist">Neffex</p>
+                </div>
+                <div class="area">
+                    <div class="area-up">
+                        <figure>
+                            <img class="the-song-img" src="imgs/lose-my-mind.jpg" alt="">
+                        </figure>
+                    </div>
+                    <div class="area-down">
+                        <div class="song-range">
+                            <span id="current-time">00:00</span>
+                            <div class="range-input">
+                                <input type="range" min="0" max="10" value="0">
+                            </div>
+                            <span id="end-time">02:30</span>
+                        </div>
+                        <div class="song-control">
+                            <div class="left-control"><i class="fa fa-redo" id="replay"></i></div>
+                            <div class="mid-control">
+                                <i class="bx bx-skip-previous" id="prev-song"></i>
+                                <i class="fas fa-pause-circle"></i>
+                                <i class="bx bx-skip-next" id="next-song"></i>
+                            </div>
+                            <div class="right-control">
+                                <i class="fa fa-repeat" id="change-mode"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Shortcut format -->
+            <section class="song-short" id="song-short" hidden>
+                <div class="left-song">
+                    <i class="bx bx-pause"></i>
+                    <figure class="song-img">
+                        <img class="the-song-img" src="imgs/lose-my-mind.jpg" alt="">
+                    </figure>
+                </div>
+                <div class="right-song">
+                    <i class="bx bx-chevron-up" id="expand-song"></i>
+                </div>
+            </section>
+        </article>
+    </div>
+</body>
+</html>
