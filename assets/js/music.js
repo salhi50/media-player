@@ -250,6 +250,7 @@ function getNextSong() {
         focusedSong = 0;
     }
     getTargetSong();
+    updateBgSize();
 }
 
 function getPrevSong() {
@@ -259,6 +260,7 @@ function getPrevSong() {
         focusedSong = songs.length - 1;
     }
     getTargetSong();
+    updateBgSize();
 }
 
 // Add event to the control btns
